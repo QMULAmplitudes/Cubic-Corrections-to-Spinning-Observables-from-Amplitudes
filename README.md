@@ -31,6 +31,6 @@ We also quote the notation here for reference:
 (*aMi is Subscript[a, -]=a1-a2* defined in equation(6.79)*)\
 (*aPl is Subscript[a, +]=a1+a2* defined in equation(6.79)*)\
 (*b is the modulus of the impact parameter.*)\
-(*EE is the center of mass energy E defined in equation (6.77)*)\
+(*EE is the center of mass energy E defined in equation (6.77)*)
 
 
