@@ -19,7 +19,7 @@ We also quote the notation here for reference:
 (*bp is the projection of b onto the plane orthogonal to Subscript[u, 1] and Subscript[u, 2], as defined in equation(6.50).*)\
 (*x[\[Mu]], for four-vector x and index \[Mu] is simply (x^\[Mu]).*)\
 (*\[Epsilon][a,b,c,d] for four-vectors a,b,c,d is the Levi-Civita contraction \[Epsilon]^\[Mu]\[Nu]\[Rho]\[Sigma]Subscript[a, \[Mu]]Subscript[b, \[Nu]]Subscript[c, \[Rho]]Subscript[d, \[Sigma]].*)\
-(*\[Epsilon][a,b,c,\[Mu]] for four-vectors a,b,c and index \[Mu] is the Levi-Civita contraction \[Epsilon]^\[Nu]\[Rho]\[Sigma]\[Mu]Subscript[a, \[Nu]]Subscript[b, \[Rho]]Subscript[c, \[Sigma]].*)\
+(*\[Epsilon][a,b,c,\[Mu]] for four-vectors a,b,c and index \[Mu] is the Levi-Civita contraction \[Epsilon]^\[Nu]\[Rho]\[Sigma]\[Mu]Subscript[a, \[Nu]]Subscript[b, \[Rho]]Subscript[c, \[Sigma]].*)
 
 
 (*Notation for scattering angles*)
