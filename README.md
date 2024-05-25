@@ -1,5 +1,5 @@
 # Cubic-Corrections-to-Spinning-Observables-from-Amplitudes
-This is the companion repository to "Spinning binary dynamics in cubic effective field theories of gravity" 2405.xxxxx.
+This is the companion repository to "Spinning binary dynamics in cubic effective field theories of gravity" 2405.13826.
 Here we quote the results for the impulse and spin kick for the cubic interactions I1,G3, IT1, GT3 defined in equation(1.3) of the paper.
 Additionally, we give the scattering angle for the parity-even interactions I1 and G3, which is also given in equations(6.80) and (6.81) of the paper.
 
