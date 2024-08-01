@@ -1,0 +1,171 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5924,        163]
+NotebookOptionsPosition[      5297,        146]
+NotebookOutlinePosition[      5692,        162]
+CellTagsIndexPosition[      5649,        159]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.9315265053977637`*^9, 3.9315265129044137`*^9}},
+ CellLabel->
+  "In[140]:=",ExpressionUUID->"8f4b19ad-75ed-4e27-b3dd-f27e58601258"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"Notation", ":"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "m1", " ", "and", " ", "m2", " ", "are", " ", "the", " ", "masses", " ", 
+    "of", " ", "the", " ", "two", " ", "black", " ", "holes"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"U", " ", "is", " ", "the", " ", "retarded", " ", "time"}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"\[CapitalKappa]", "=", 
+    RowBox[{"Sqrt", "[", 
+     RowBox[{"32", "\[Pi]G"}], "]"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "\[Sigma]", " ", "is", " ", "the", " ", "Lorentz", " ", "factor", " ", 
+     "\[Sigma]"}], ":=", 
+    RowBox[{"u1", "\[CenterDot]", "u2"}]}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "a1", " ", "and", " ", "a2", " ", "are", " ", "the", " ", "ring", " ", 
+    "radii", " ", "of", " ", "the", " ", "two", " ", "black", " ", "holes"}], 
+   " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "u1", " ", "and", " ", "u2", " ", "are", " ", "the", " ", "velocities", 
+    " ", "of", " ", "the", " ", "two", " ", "black", " ", "holes"}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "k", " ", "denotes", " ", "a", " ", "unit", " ", "vector", " ", "in", " ",
+      "the", " ", "direction", " ", "of", " ", "the", " ", "radiation"}], ",", 
+    RowBox[{"denoted", " ", 
+     OverscriptBox["k", "^"], " ", "in", " ", "the", " ", "paper"}]}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"sp", "[", 
+      RowBox[{"A", ",", "B"}], "]"}], " ", "represents", " ", "the", " ", 
+     "scalar", " ", "product", " ", "of", " ", "A", " ", "and", " ", "B"}], 
+    ",", " ", 
+    RowBox[{"A", "\[CenterDot]", "B"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[Epsilon]", "[", 
+       RowBox[{"A", ",", "B", ",", "C", ",", "D"}], "]"}], " ", "is", " ", 
+      "the", " ", "4", " ", "dimensional", " ", "Levi"}], "-", 
+     RowBox[{"Civita", " ", "tensor", " ", "fully", " ", "contracted"}]}], 
+    ",", " ", 
+    RowBox[{
+     SuperscriptBox["\[Epsilon]", "\[Mu]\[Nu]\[Rho]\[Sigma]"], " ", 
+     SubscriptBox["A", "\[Mu]"], " ", 
+     SubscriptBox["B", "\[Nu]"], " ", 
+     SubscriptBox["C", "\[Rho]"], " ", 
+     SubscriptBox["D", "\[Sigma]"]}]}], " ", "*)"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"ksq", "[", 
+     RowBox[{"A", ",", "B"}], "]"}], " ", "is", " ", "the", " ", "spinor", 
+    " ", 
+    RowBox[{
+     RowBox[{"trace", "[", 
+      RowBox[{"k", "|", 
+       RowBox[{"A", " ", "B"}], "|", "k"}], "]"}], ".", "Note"}], " ", "that",
+     " ", 
+    SuperscriptBox["X", "\[Mu]"], " ", "in", " ", "the", " ", "paper", " ", 
+    "corresponds", " ", "to", " ", 
+    RowBox[{"ksq", "[", 
+     RowBox[{"v1", ",", "\[Mu]"}], "]"}]}], " ", "*)"}]}]], "Input",
+ CellChangeTimes->{{3.931526747353367*^9, 3.9315267987506514`*^9}},
+ CellLabel->
+  "In[141]:=",ExpressionUUID->"f7b8980e-f154-4e78-8393-afc04d3ac670"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{
+   "The", " ", "waveforms", " ", "arising", " ", "due", " ", "to", " ", 
+    "parity"}], "-", 
+   RowBox[{
+   "odd", " ", "interactions", " ", "can", " ", "be", " ", "obtained", " ", 
+    "by", " ", "multiplying", " ", "by", " ", "\[ImaginaryI]"}]}], " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.931527296891706*^9, 
+  3.9315273207495213`*^9}},ExpressionUUID->"1599b194-a226-49a8-8e88-\
+f3a3bbc723bb"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"scalarG3Waveform", "=", 
+   RowBox[{"Get", "[", "\"\<scalarG3Waveform.m\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"scalarI1Waveform", "=", 
+   RowBox[{"Get", "[", "\"\<scalarI1Waveform.m\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"spinningG3Waveform", "=", 
+   RowBox[{"Get", "[", "\"\<spinningG3Waveform.m\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"spinningI1Waveform", "=", 
+   RowBox[{"Get", "[", "\"\<spinningI1Waveform.m\>\"", "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.931526488977919*^9, 3.9315265435983915`*^9}, {
+  3.9315269264512353`*^9, 3.9315269313137283`*^9}},
+ CellLabel->
+  "In[142]:=",ExpressionUUID->"5aa04735-6ca1-4bb5-bf6c-cffcb9adbb9f"]
+},
+WindowSize->{949, 467},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (June 3, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f66a81db-40d6-42ae-8298-24d8e235b0e4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 276, 6, 28, "Input",ExpressionUUID->"8f4b19ad-75ed-4e27-b3dd-f27e58601258"],
+Cell[837, 28, 3207, 80, 222, "Input",ExpressionUUID->"f7b8980e-f154-4e78-8393-afc04d3ac670"],
+Cell[4047, 110, 462, 12, 28, "Input",ExpressionUUID->"1599b194-a226-49a8-8e88-f3a3bbc723bb"],
+Cell[4512, 124, 781, 20, 86, "Input",ExpressionUUID->"5aa04735-6ca1-4bb5-bf6c-cffcb9adbb9f"]
+}
+]
+*)
+
